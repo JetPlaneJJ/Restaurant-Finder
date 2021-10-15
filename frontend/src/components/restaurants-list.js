@@ -131,8 +131,9 @@ const RestaurantsList = (props) => {
         </div>
       </div>
       <div className="row">
-        {restaurants.map((restaurant) => {
+        { restaurants.map((restaurant) => {
           const readableAddress = `${restaurant.address.building} ${restaurant.address.street}, ${restaurant.address.zipcode}`;
+          
           return (
             <div
               key={restaurant + ":" + readableAddress}
