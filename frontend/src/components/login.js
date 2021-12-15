@@ -22,7 +22,7 @@ function Login(props) {
 
   return (
     <div className='submit-form'>
-      This is Login section.
+      This is the Login Page (WIP).
       <div>
         <div className="form-group">
           <label htmlFor="user">Username</label>

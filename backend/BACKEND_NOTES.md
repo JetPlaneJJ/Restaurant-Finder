@@ -9,8 +9,8 @@
 - Controller talks to DAO using implemented methods
 
 # CRUD
-- GET: http://localhost:5000/api/v1/restaurants/
-  - http://localhost:5000/api/v1/restaurants/id/5eb3d668b31de5d588f4296c (get details + reviews of some restaurant)
+- GET: http://localhost:{port}/api/v1/restaurants/
+  - http://localhost:{port}/api/v1/restaurants/id/5eb3d668b31de5d588f4296c (get details + reviews of some restaurant)
 
 - POST example: http://localhost:5000/api/v1/restaurants/review --> 
 ```
@@ -46,3 +46,15 @@
 - Use $field-name format when referencing a FIELD from the original or intermediary document
   - Ex: $restaurant_id
   
+# HuskyADAPT fields
+TOY
+- *toy_name
+- manufacturer
+- output (light, sound, motion...)
+- switch_type (momentary, latching)
+- adaptation_difficulty (easy, medium, difficult)
+- image_general_link
+- image_unadapted_link
+- image_adapted_circuity_link
+- purchase_link
+- toy_activation_video_link

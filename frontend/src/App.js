@@ -21,12 +21,12 @@ export default function App() {
   // const handleRedirect = () => {};
 
   const logoutSection = (user) => (
-      <btn onClick={logout} className="nav-link">
+      <btn onClick={logout} className="navbar-nav">
         Logout {user.name}
       </btn>
   );
   const loginSection = () => (
-    <Link to={"/login"} className="nav-link">
+    <Link to={"/login"} className="navbar-nav">
       Login
     </Link>
   );
@@ -34,19 +34,10 @@ export default function App() {
   return (
     <Router>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/restaurants" className="navbar-brand">
-          Home Page: Restaurant Reviews
+        <a href="/restaurants" className="navbar-nav">
+          Home
         </a>
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/restaurants"} className="nav-link">
-              Restaurants
-            </Link>
-          </li>
-          <li className="nav-item">
-            {user ? logoutSection(user) : loginSection()}
-          </li>
-        </div>
+        {user ? logoutSection(user) : loginSection()}
       </nav>
 
       <Switch>

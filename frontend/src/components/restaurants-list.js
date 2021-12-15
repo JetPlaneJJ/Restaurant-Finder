@@ -84,53 +84,57 @@ const RestaurantsList = (props) => {
   };
 
   return (
-    <div className="RestaurantsList">
-      This is RestaurantsList section.
-      <div className="input-group">
-        <input
-          type={"text"}
-          className="form-control"
-          placeholder="Restaurant Name"
-          value={searchName}
-          onChange={onChangeSearchName}
-        />
-        <div className="input-group-append">
-          <button className="btn" type="button" onClick={findByName}>
-            Search By Name
-          </button>
+    <div className="page">
+      <h1>Restaurants Search</h1>
+      
+      <div className="input-section">
+        <div className="input-group">
+          <input
+            type={"text"}
+            className="form-control"
+            placeholder="Restaurant Name"
+            value={searchName}
+            onChange={onChangeSearchName}
+          />
+          <div className="input-group-append">
+            <button className="btn" type="button" onClick={findByName}>
+              Search By Name  
+            </button>
+          </div>
+        </div>
+        <div className="input-group">
+          <input
+            type={"text"}
+            className="form-control"
+            placeholder="Zip Code"
+            value={searchZip}
+            onChange={onChangeSearchZip}
+          />
+          <div className="input-group-append">
+            <button className="btn" type="button" onClick={findByZip}>
+              Search By Zip
+            </button>
+          </div>
+        </div>
+        <div className="input-group">
+          <select onChange={onChangeSearchCuisine}>
+            {cuisines.map((cuisine) => {
+              return (
+                <option key={cuisine} value={cuisine}>
+                  {cuisine.slice(0, 20)}
+                </option>
+              );
+            })}
+          </select>
+          <div className="input-group-append">
+            <button className="btn" type="button" onClick={findByCuisine}>
+              Search By Cuisine
+            </button>
+          </div>
         </div>
       </div>
-      <div className="input-group">
-        <input
-          type={"text"}
-          className="form-control"
-          placeholder="Zip Code"
-          value={searchZip}
-          onChange={onChangeSearchZip}
-        />
-        <div className="input-group-append">
-          <button className="btn" type="button" onClick={findByZip}>
-            Search By Zip
-          </button>
-        </div>
-      </div>
-      <div className="input-group">
-        <select onChange={onChangeSearchCuisine}>
-          {cuisines.map((cuisine) => {
-            return (
-              <option key={cuisine} value={cuisine}>
-                {cuisine.slice(0, 20)}
-              </option>
-            );
-          })}
-        </select>
-        <div className="input-group-append">
-          <button className="btn" type="button" onClick={findByCuisine}>
-            Search By Cuisine
-          </button>
-        </div>
-      </div>
-      <div className="row">
+
+      <div className="container">
         { restaurants.map((restaurant) => {
           const readableAddress = `${restaurant.address.building} ${restaurant.address.street}, ${restaurant.address.zipcode}`;
           
