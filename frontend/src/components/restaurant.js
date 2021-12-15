@@ -55,7 +55,11 @@ function Restaurant(props) {
               <strong>Cuisine:</strong>{restaurant.cuisine}<br/>
               <strong>Address:</strong>{`${restaurant.address.building} ${restaurant.address.street}, ${restaurant.address.zipcode}`}<br/>
             </p>
-            <Link to={"/restaurants/" + props.match.params.id + "/review"} className='btn'>
+            <Link 
+              to={{ pathname: "/restaurants/" + props.match.params.id + "/review", 
+                state: {restaurant: restaurant.name, id: props.match.params.id}}}
+              className='btn'
+            >
               Add Review
             </Link>
 

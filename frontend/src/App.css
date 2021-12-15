@@ -75,3 +75,11 @@ li {
   padding: 1px 10px 34px 34px;
   background-color: #DBF5FD;
 }
+
+.review-field {
+  margin-top: 24px;
+  width: 50%;
+  height: 100px;
+  text-align: left;
+  justify-content: flex-start;
+}
