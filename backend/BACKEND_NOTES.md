@@ -45,9 +45,9 @@
 - Access value -> prefix var name with double dollar signs -> "$$<variable>".
 - Use $field-name format when referencing a FIELD from the original or intermediary document
   - Ex: $restaurant_id
-  
-# HuskyADAPT fields
-TOY
+<!--   
+# [WIP] HuskyADAPT fields
+TOYS
 - *toy_name
 - manufacturer
 - output (light, sound, motion...)
@@ -58,3 +58,18 @@ TOY
 - image_adapted_circuity_link
 - purchase_link
 - toy_activation_video_link
+
+```js
+{
+	"toy_name": "Spinning Olaf Plush",
+	"manufacturer": "Disney",
+	"output": "sound, motion",
+	"switch_type": "latching",
+	"adaptation_difficulty": "easy/medium",
+	"image_general_link": "",
+	"image_unadapted_link": "",
+	"image_adapted_circuity_link": "",
+	"toy_activation_video_link": "",
+	"purchase_link": "https://www.amazon.com/gp/product/B00JSONCB8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00JSONCB8&linkCode=as2&tag=huskyadapt04-20&linkId=aa3d7abdf7cdb8441db2806fd5089f7b"
+}
+``` -->

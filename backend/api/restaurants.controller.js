@@ -1,3 +1,4 @@
+// Provides methods for interacting with the Restaurants DAO
 import RestaurantsDAO from "../dao/restaurantsDAO.js";
 
 export default class RestaurantsController {
