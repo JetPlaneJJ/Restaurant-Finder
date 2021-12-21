@@ -78,7 +78,7 @@ function Restaurant(props) {
                           </p>
                           { (props.user && props.user.id === review.user_id) && 
                             <div className='row'>
-                              <a onClick={() => deleteReview(review._id, index)} className='btn'>
+                              <a  onClick={() => deleteReview(review._id, index)} className='btn'>
                                 Delete Review
                               </a>
                               <Link to={{

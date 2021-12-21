@@ -71,9 +71,10 @@ li {
 }
 
 .card {
-  border-radius: 30px;
+  min-height: 150px;
+  border-radius: 16px;
   padding: 1px 10px 34px 34px;
-  background-color: #DBF5FD;
+  background-color: #dcd6fa;
 }
 
 .review-field {

@@ -2,6 +2,7 @@
 import express from "express";
 import RestaurantsCtrl from "./restaurants.controller.js";
 import ReviewsCtrl from "./reviews.controller.js";
+import ToysController from "./toys.controller.js";
 
 const router = express.Router();
 
@@ -12,6 +13,10 @@ router.route("/id/:id") // obtain restaurants and their reviews by ID
     .get(RestaurantsCtrl.apiGetRestaurantsById);
 router.route("/cuisines")
     .get(RestaurantsCtrl.apiGetRestaurantCuisines);
+
+// Toy info
+router.route("/toys")
+    .get(ToysController.apiGetToys);
 
 // Review info
 router

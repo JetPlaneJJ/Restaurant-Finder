@@ -15,10 +15,10 @@ function Login(props) {
     setUser({ ...user, [name]: value });
   };
 
-  const login = () => {
-    props.login(user)
-    props.history.push('/') // redirect to homepage
-  }
+  // const login = () => {
+  //   props.login(user)
+  //   props.history.push('/') // redirect to homepage
+  // }
 
   return (
     <div className='submit-form'>

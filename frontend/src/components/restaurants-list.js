@@ -150,7 +150,7 @@ const RestaurantsList = (props) => {
                 <div className="card-body">
                   <h2 className="card-title">{restaurant.name}</h2>
                   <p className="card-text">
-                    <strong>Cuisine:</strong>
+                    <strong>Cuisine: </strong>
                     {restaurant.cuisine}
                     <br />
                     <strong>Address: </strong>

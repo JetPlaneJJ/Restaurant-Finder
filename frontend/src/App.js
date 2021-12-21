@@ -5,6 +5,7 @@ import "./App.css";
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurant";
 import RestaurantsList from "./components/restaurants-list";
+import ToysList from "./components/toys-list";
 import Login from "./components/login";
 
 export default function App() {
@@ -21,9 +22,9 @@ export default function App() {
   // const handleRedirect = () => {};
 
   const logoutSection = (user) => (
-      <btn onClick={logout} className="navbar-nav">
-        Logout {user.name}
-      </btn>
+    <btn onClick={logout} className="navbar-nav">
+      Logout {user.name}
+    </btn>
   );
   const loginSection = () => (
     <Link to={"/login"} className="navbar-nav">
@@ -34,18 +35,21 @@ export default function App() {
   return (
     <Router>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <a href="/toys" className="navbar-nav">
+          HuskyADAPT Adaptable Toy Inventory
+        </a>
         <a href="/restaurants" className="navbar-nav">
-          Home
+          Restaurants (Testing Only)
         </a>
         {user ? logoutSection(user) : loginSection()}
       </nav>
 
       <Switch>
         <Route
-          exact
-          path={["/", "/restaurants"]}
-          component={RestaurantsList}
+          exact path={["/", "/toys"]}
+          component={ToysList}
         />
+        <Route exact path={"/restaurants"} component={RestaurantsList} />
         <Route
           path={"/restaurants/:id/review"}
           render={(props) => <AddReview {...props} user={user} />}
